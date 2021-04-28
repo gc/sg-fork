@@ -1,0 +1,29 @@
+{
+	"extends": ["@skyra", "plugin:prettier/recommended"],
+	"rules": {
+		// Handled by Prettier
+		"@typescript-eslint/indent": 0,
+
+		// Not needed for this project
+		"@typescript-eslint/naming-convention": 0,
+		"@typescript-eslint/require-await": 0,
+		"@typescript-eslint/init-declarations": 0,
+		"@typescript-eslint/no-use-before-define": 0,
+		"@typescript-eslint/no-invalid-this": 0,
+		"@typescript-eslint/ban-types": 0
+	},
+	"overrides": [
+		{
+			"files": ["tests/lib/*.ts"],
+			"rules": {
+				"@typescript-eslint/no-invalid-this": 0
+			}
+		},
+		{
+			"files":["tests/**/*.ts"],
+			"rules": {
+				"@typescript-eslint/init-declarations": 0
+			}
+		}
+	]
+}
